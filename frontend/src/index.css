@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;500;600;700&family=Unbounded:wght@400;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  background: #00132d;
+  color: #E5E7EB;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #00377e;
+  color: #fff;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #00132d;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #002d67, #00377e);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00D1FF;
+}
+
+@layer base {
+  :root {
+    --background: 213 100% 9%;
+    --foreground: 220 13% 91%;
+    --card: 214 100% 14%;
+    --card-foreground: 220 13% 91%;
+    --popover: 213 100% 9%;
+    --popover-foreground: 220 13% 91%;
+    --primary: 214 100% 20%;
+    --primary-foreground: 220 13% 91%;
+    --secondary: 214 100% 14%;
+    --secondary-foreground: 220 13% 91%;
+    --muted: 214 100% 14%;
+    --muted-foreground: 220 9% 64%;
+    --accent: 190 100% 50%;
+    --accent-foreground: 213 100% 9%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 220 13% 91%;
+    --border: 198 94% 74%;
+    --input: 214 100% 14%;
+    --ring: 190 100% 50%;
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+}
+
+/* Utility classes */
+.font-heading {
+  font-family: 'Unbounded', sans-serif;
+}
+.font-body {
+  font-family: 'Outfit', sans-serif;
+}
+.font-mono-acc {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #7dd3fc 0%, #00D1FF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.gradient-text-purple {
+  background: linear-gradient(90deg, #7dd3fc 0%, #bae6fd 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.glass-card {
+  background: rgba(0, 30, 69, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(125, 211, 252, 0.18);
+  border-radius: 1.25rem;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(0, 209, 255, 0.5);
+  box-shadow: 0 0 30px rgba(0, 209, 255, 0.15), 0 8px 32px rgba(0, 0, 0, 0.4);
+  transform: translateY(-4px);
+}
+
+.glow-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.75rem;
+  background: linear-gradient(90deg, #002d67 0%, #00377e 100%);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 9999px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.glow-button:hover {
+  box-shadow: 0 0 30px rgba(0, 55, 126, 0.6), 0 0 60px rgba(0, 209, 255, 0.2);
+  border-color: #00D1FF;
+  transform: translateY(-2px);
+}
+
+.ghost-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.75rem;
+  background: transparent;
+  color: #bae6fd;
+  font-weight: 600;
+  border-radius: 9999px;
+  border: 1px solid rgba(125, 211, 252, 0.4);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.ghost-button:hover {
+  background: rgba(125, 211, 252, 0.08);
+  border-color: #00D1FF;
+  color: #00D1FF;
+  box-shadow: 0 0 20px rgba(0, 209, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.link-glow {
+  transition: all 0.3s ease;
+  position: relative;
+}
+.link-glow:hover {
+  color: #bae6fd;
+  text-shadow: 0 0 12px rgba(125, 211, 252, 0.8);
+  text-decoration: underline;
+  text-decoration-color: #00D1FF;
+  text-underline-offset: 4px;
+}
+
+.section-title-mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #00D1FF;
+}
+
+/* Grid background pattern */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(125, 211, 252, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(125, 211, 252, 0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Radial glow background */
+.radial-glow {
+  background: radial-gradient(circle at 50% 50%, rgba(0, 55, 126, 0.25) 0%, rgba(0, 209, 255, 0.08) 35%, transparent 70%);
+}
+
+.contact-glow {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 100%, rgba(0, 55, 126, 0.35) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 40% at 50% 0%, rgba(0, 209, 255, 0.12) 0%, transparent 60%);
+}
+
+/* Floating animation */
+@keyframes floaty {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+.floaty {
+  animation: floaty 6s ease-in-out infinite;
+}
+
+/* Pulse ring for avatar */
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(0, 209, 255, 0.5); }
+  70% { box-shadow: 0 0 0 22px rgba(0, 209, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 209, 255, 0); }
+}
+.pulse-ring {
+  animation: pulse-ring 2.5s ease-out infinite;
+}
+
+/* Marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee 40s linear infinite;
+}
+
+/* Timeline dot pulse */
+@keyframes dot-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0, 209, 255, 0.7); }
+  50% { box-shadow: 0 0 0 8px rgba(0, 209, 255, 0); }
+}
+.dot-pulse {
+  animation: dot-pulse 2s ease-out infinite;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 209, 255, 0.4);
+}
+
+/* Hide scrollbar in horizontal scroll containers */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+
+/* =====================================================================
+   LIGHT THEME OVERRIDES
+   Activated via <html data-theme="light">. Uses attribute-substring
+   selectors so all opacity variants (e.g. bg-[#00132d]/80) match.
+   ===================================================================== */
+
+html[data-theme="light"] {
+  background: #F4F7FC;
+  color: #0B1B36;
+}
+
+html[data-theme="light"] body {
+  background: #F4F7FC;
+  color: #0B1B36;
+}
+
+html[data-theme="light"] ::selection {
+  background: #002d67;
+  color: #fff;
+}
+
+html[data-theme="light"] ::-webkit-scrollbar-track {
+  background: #E8EEF8;
+}
+html[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #002d67, #00377e);
+}
+html[data-theme="light"] ::-webkit-scrollbar-thumb:hover {
+  background: #0E7490;
+}
+
+/* ---------- Backgrounds (deep) ---------- */
+html[data-theme="light"] [class*="bg-[#00132d]"] {
+  background-color: #F4F7FC !important;
+}
+html[data-theme="light"] [class*="bg-[#001e45]"] {
+  background-color: #FFFFFF !important;
+}
+html[data-theme="light"] [class*="bg-[#000a1f]"] {
+  background-color: #F4F7FC !important;
+}
+
+/* Keep brand gradient surfaces (buttons / logo) as-is on light theme:
+   #002d67 → #00377e gradient still works as primary action color. */
+
+/* ---------- Text ---------- */
+html[data-theme="light"] [class*="text-[#E5E7EB]"] {
+  color: #0B1B36 !important;
+}
+html[data-theme="light"] [class*="text-[#9CA3AF]"] {
+  color: #4B5871 !important;
+}
+html[data-theme="light"] [class*="text-[#bae6fd]"] {
+  color: #1E3A8A !important;
+}
+html[data-theme="light"] [class*="text-[#7dd3fc]"] {
+  color: #002d67 !important;
+}
+html[data-theme="light"] [class*="text-[#00D1FF]"] {
+  color: #0E7490 !important;
+}
+
+/* ---------- Borders ---------- */
+html[data-theme="light"] [class*="border-[#7dd3fc]"] {
+  border-color: rgba(0, 45, 103, 0.16) !important;
+}
+html[data-theme="light"] [class*="border-[#00D1FF]"] {
+  border-color: rgba(14, 116, 144, 0.45) !important;
+}
+html[data-theme="light"] [class*="border-[#001e45]"] {
+  border-color: #DCE5F0 !important;
+}
+html[data-theme="light"] [class*="border-[#002d67]"] {
+  border-color: #DCE5F0 !important;
+}
+html[data-theme="light"] [class*="border-[#bae6fd]"] {
+  border-color: #94A3B8 !important;
+}
+
+/* ---------- Hover ring colors ---------- */
+html[data-theme="light"] [class*="hover:border-[#00D1FF]"]:hover {
+  border-color: rgba(14, 116, 144, 0.7) !important;
+}
+html[data-theme="light"] [class*="hover:text-[#00D1FF]"]:hover {
+  color: #0E7490 !important;
+}
+html[data-theme="light"] [class*="hover:text-[#bae6fd]"]:hover {
+  color: #002d67 !important;
+}
+
+/* ---------- Inline-styled SVG icons (cyan) ---------- */
+html[data-theme="light"] svg[style*="#00D1FF"],
+html[data-theme="light"] svg[style*="rgb(0, 209, 255)"] {
+  color: #0E7490 !important;
+}
+
+/* ---------- Components ---------- */
+html[data-theme="light"] .glass-card {
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 45, 103, 0.12) !important;
+  box-shadow: 0 6px 24px rgba(0, 45, 103, 0.07) !important;
+}
+html[data-theme="light"] .glass-card:hover {
+  border-color: rgba(14, 116, 144, 0.45) !important;
+  box-shadow:
+    0 10px 32px rgba(0, 45, 103, 0.12),
+    0 0 30px rgba(14, 116, 144, 0.1) !important;
+}
+
+html[data-theme="light"] .ghost-button {
+  color: #002d67 !important;
+  border-color: rgba(0, 45, 103, 0.25) !important;
+}
+html[data-theme="light"] .ghost-button:hover {
+  background: rgba(0, 45, 103, 0.05) !important;
+  border-color: #0E7490 !important;
+  color: #0E7490 !important;
+  box-shadow: 0 0 18px rgba(14, 116, 144, 0.2) !important;
+}
+
+html[data-theme="light"] .link-glow:hover {
+  color: #002d67 !important;
+  text-shadow: 0 0 10px rgba(0, 45, 103, 0.35);
+  text-decoration-color: #0E7490;
+}
+
+html[data-theme="light"] .section-title-mono {
+  color: #0E7490 !important;
+}
+
+html[data-theme="light"] .gradient-text {
+  background-image: linear-gradient(90deg, #002d67 0%, #0E7490 100%) !important;
+  background-color: transparent !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+}
+html[data-theme="light"] .gradient-text-purple {
+  background-image: linear-gradient(90deg, #002d67 0%, #1E3A8A 100%) !important;
+  background-color: transparent !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+}
+
+html[data-theme="light"] .grid-bg {
+  background-image:
+    linear-gradient(rgba(0, 45, 103, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 45, 103, 0.06) 1px, transparent 1px);
+}
+
+html[data-theme="light"] .radial-glow {
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(0, 55, 126, 0.1) 0%,
+    rgba(14, 116, 144, 0.05) 35%,
+    transparent 70%
+  );
+}
+
+html[data-theme="light"] .contact-glow {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 100%, rgba(0, 55, 126, 0.14) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 40% at 50% 0%, rgba(14, 116, 144, 0.06) 0%, transparent 60%);
+}
+
+/* ---------- Form fields ---------- */
+html[data-theme="light"] input,
+html[data-theme="light"] textarea {
+  background-color: #FFFFFF !important;
+  color: #0B1B36 !important;
+  border-color: #DCE5F0 !important;
+}
+html[data-theme="light"] input::placeholder,
+html[data-theme="light"] textarea::placeholder {
+  color: #94A3B8 !important;
+}
+html[data-theme="light"] input:focus,
+html[data-theme="light"] textarea:focus {
+  box-shadow: 0 0 0 2px rgba(14, 116, 144, 0.35) !important;
+}
+
+/* ---------- Navbar (when scrolled) ---------- */
+html[data-theme="light"] header[data-testid="navbar"].nav-scrolled,
+html[data-theme="light"] header[data-testid="navbar"][class*="backdrop-blur-xl"] {
+  background-color: rgba(244, 247, 252, 0.85) !important;
+  border-bottom-color: #DCE5F0 !important;
+}
+
+/* ---------- Footer ---------- */
+html[data-theme="light"] footer[data-testid="footer"] {
+  background-color: #FFFFFF !important;
+  border-top-color: #DCE5F0 !important;
+}
+
+/* ---------- PDF modal body should stay white anyway ---------- */
+html[data-theme="light"] [data-testid$="-modal"] {
+  background-color: #FFFFFF !important;
+  box-shadow: 0 30px 80px rgba(0, 45, 103, 0.25) !important;
+}
+
+/* ---------- Sphere container fade slightly on light bg ---------- */
+html[data-theme="light"] [data-testid="hero-particle-sphere"] {
+  filter: brightness(0.55) saturate(1.4);
+}
+
+/* ---------- Skill / tag pills on light bg ---------- */
+html[data-theme="light"] [class*="bg-[#001e45]"][class*="border-[#7dd3fc]"] {
+  background-color: rgba(0, 45, 103, 0.05) !important;
+  border-color: rgba(0, 45, 103, 0.18) !important;
+}
+
