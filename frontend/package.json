@@ -1,6 +1,5 @@
 {
   "name": "frontend",
-  "homepage": "https://alhusamimm.github.io/maram-portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -66,12 +65,12 @@
     "zod": "3.24.4"
   },
   "scripts": {
-  "start": "craco start",
-  "build": "craco build",
-  "test": "craco test",
-  "predeploy": "yarn build",
-  "deploy": "gh-pages -d build"
-},
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
