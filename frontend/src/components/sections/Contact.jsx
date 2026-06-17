@@ -64,9 +64,9 @@ export default function Contact() {
             align="center"
           />
         </motion.div>
-
+        
+        {/*
         <div className="grid lg:grid-cols-5 gap-6 mt-8">
-          {/* Form */}
           <motion.form
             onSubmit={handleSubmit}
             initial={{ opacity: 0, y: 30 }}
@@ -138,7 +138,9 @@ export default function Contact() {
                 </>
               )}
             </button>
-          </motion.form>
+          </motion.form> 
+           */}
+          
 
           {/* Direct contact card */}
           <motion.div
@@ -210,7 +212,7 @@ export default function Contact() {
             </div>
           </motion.div>
         </div>
-      </div>
+      
     </section>
   );
 }
