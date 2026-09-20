@@ -129,8 +129,8 @@ export const FEATURED_PROJECT = {
 
 export const LIVE_PROJECTS = [
   {
-    title: "EBC Website",
-    subtitle: "Educational & Business Consulting Platform",
+    title: "EBE Website",
+    subtitle: "Environmental Balance Company",
     description:
       "Designed and developed a complete bilingual website featuring modern UI/UX, responsive design, certificate management, dynamic content sections, and scalable architecture for future CMS integration.",
     role: "Full-Stack Web Developer & UI/UX Designer",
