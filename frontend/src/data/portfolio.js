@@ -15,7 +15,7 @@ export const PERSONAL = {
   youtube: "www.youtube.com/@MaramBuilds",
 };
 
-export const ABOUT = `I am a Computer Science student with a GPA of 3.96, specializing in the AI and Cybersecurity track. I am passionate about building intelligent systems and solving real-world problems using modern technologies. I continuously explore new tools and approaches to develop efficient, secure, and scalable solutions.`;
+export const ABOUT = `I am a Computer Science fresh graduate with a GPA of 3.96, specializing in the AI and Cybersecurity track. I am passionate about building intelligent systems and solving real-world problems using modern technologies. I continuously explore new tools and approaches to develop efficient, secure, and scalable solutions.`;
 
 export const EXPERIENCE = [
   {
@@ -58,7 +58,10 @@ export const EXPERIENCE = [
       "Published the app on Google Play",
       "Used Postman for API testing and GitHub for version control",
     ],
-    certificate: null,
+    certificate: {
+      url: portfolioFileUrl("red_sand.pdf"),
+      title: "Red Sand Technology — Software Engineer Intern Certificate",
+    },
   },
 ];
 
@@ -169,17 +172,7 @@ export const LIVE_PROJECTS = [
     role: "Web Developer",
     url: "https://portfolio.wowit.sa/families/",
     accent: "from-[#7dd3fc] to-[#002d67]",
-  },
-  {
-    title: "MATCHY Uniforms",
-    subtitle: "Custom Uniforms & Embroidery E-Commerce Platform",
-    description:
-      "Spearheading the complete development and technical strategy of a bilingual e-commerce platform for a Saudi custom uniforms and embroidery brand. Responsible for business requirements analysis, user experience design, system architecture, payment and logistics solution evaluation, frontend development, backend planning, and deployment strategy.",
-    role: "Lead Full-Stack Developer",
-    url: null,
-    inDevelopment: true,
-    accent: "from-[#0E7490] to-[#002d67]",
-  },
+  }
 ];
 
 export const OTHER_PROJECTS = [

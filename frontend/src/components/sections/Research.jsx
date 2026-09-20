@@ -35,7 +35,7 @@ function SmartCityCard() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.6 }}
-      className="relative overflow-hidden rounded-2xl border border-[#FFD966]/35 bg-gradient-to-br from-[#00132d] via-[#001e45] to-[#00132d] p-7 sm:p-9 shadow-[0_0_45px_rgba(255,184,0,0.12)]"
+      className="keep-darkrelative overflow-hidden rounded-2xl border border-[#FFD966]/35 bg-gradient-to-br from-[#00132d] via-[#001e45] to-[#00132d] p-7 sm:p-9 shadow-[0_0_45px_rgba(255,184,0,0.12)]"
       data-testid="research-card-smart-cities"
     >
       {/* Gold accent strip */}
@@ -56,11 +56,17 @@ function SmartCityCard() {
             </span>
           </div>
 
-          <h3 className="font-heading font-bold text-xl sm:text-2xl text-[#E5E7EB] leading-snug">
+          <h3
+            className="font-heading font-bold text-xl sm:text-2xl leading-snug"
+            style={{ color: "#E5E7EB" }}
+          >
             Analyzing Security Threats and Vulnerabilities in IoT Systems within Smart Cities
           </h3>
 
-          <p className="mt-4 text-sm sm:text-base text-[#9CA3AF] leading-relaxed">
+          <p
+  className="mt-4 text-sm sm:text-base leading-relaxed"
+  style={{ color: "#9CA3AF" }}
+>
             A research study analyzing cybersecurity threats and vulnerabilities affecting IoT
             systems in smart cities, identifying critical risks and proposing recommendations for
             resilient urban infrastructures.
@@ -185,13 +191,22 @@ function VRCard() {
               <Building2 size={20} className="text-white" />
             </div>
             <div>
-              <div className="font-mono-acc text-[10px] tracking-widest text-[#00D1FF] mb-1">
+              <div
+                className="font-mono-acc text-[10px] tracking-widest mb-1"
+                style={{ color: "#00D1FF" }}
+              >
                 // highlight
               </div>
-              <h4 className="font-heading font-bold text-base sm:text-lg text-[#E5E7EB]">
+              <h4
+                className="font-heading font-bold text-base sm:text-lg"
+                style={{ color: "#FFFFFF" }}
+              >
                 Real-World Stakeholder Engagement
               </h4>
-              <p className="mt-2 text-sm text-[#9CA3AF] leading-relaxed">
+              <p
+  className="mt-2 text-sm leading-relaxed"
+  style={{ color: "#E5E7EB" }}
+>
                 The project involved visiting Al Taybat Museum in Jeddah, discussing requirements
                 with museum representatives, exploring on-site implementation opportunities, and
                 gathering real stakeholder feedback to ground the technology recommendations in

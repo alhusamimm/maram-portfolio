@@ -444,9 +444,25 @@ html[data-theme="light"] footer[data-testid="footer"] {
 }
 
 /* ---------- PDF modal body should stay white anyway ---------- */
+/* Keep PDF viewer dark and readable in light mode */
 html[data-theme="light"] [data-testid$="-modal"] {
-  background-color: #FFFFFF !important;
-  box-shadow: 0 30px 80px rgba(0, 45, 103, 0.25) !important;
+  background-color: #00132d !important;
+}
+
+html[data-theme="light"] [data-testid$="-modal"] [class*="text-[#E5E7EB]"] {
+  color: #E5E7EB !important;
+}
+
+html[data-theme="light"] [data-testid$="-modal"] [class*="text-[#9CA3AF]"] {
+  color: #9CA3AF !important;
+}
+
+html[data-theme="light"] [data-testid$="-modal"] [class*="text-[#bae6fd]"] {
+  color: #bae6fd !important;
+}
+
+html[data-theme="light"] [data-testid$="-modal"] svg[style*="#00D1FF"] {
+  color: #00D1FF !important;
 }
 
 /* ---------- Sphere container fade slightly on light bg ---------- */
@@ -460,3 +476,19 @@ html[data-theme="light"] [class*="bg-[#001e45]"][class*="border-[#7dd3fc]"] {
   border-color: rgba(0, 45, 103, 0.18) !important;
 }
 
+/* Keep intentionally dark cards readable in light mode */
+html[data-theme="light"] .keep-dark {
+  background-color: #00132d !important;
+}
+
+html[data-theme="light"] .keep-dark [class*="text-[#E5E7EB]"] {
+  color: #E5E7EB !important;
+}
+
+html[data-theme="light"] .keep-dark [class*="text-[#9CA3AF]"] {
+  color: #9CA3AF !important;
+}
+
+html[data-theme="light"] .keep-dark [class*="text-[#bae6fd]"] {
+  color: #bae6fd !important;
+}

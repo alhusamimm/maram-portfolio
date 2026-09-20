@@ -39,7 +39,7 @@ export default function Hero() {
             >
               {PERSONAL.initials}
             </span>
-            <span className="section-title-mono">cs-2026 // Jeddah</span>
+            <span className="section-title-mono">cs-2026</span>
           </div>
 
           <h1
@@ -72,7 +72,7 @@ export default function Hero() {
 
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
-              href="#projects"
+              href="#live"
               data-testid="hero-view-work-cta"
               className="glow-button"
             >
