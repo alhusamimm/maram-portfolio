@@ -125,7 +125,7 @@ export default function Hero() {
               deepfake detection to secure web platforms in production.
             </p>
             <div className="mt-5 grid grid-cols-2 gap-3">
-              {["Python", "ML/NLP", "Flutter", "Frappe"].map((t) => (
+              {["ML/NLP", "Design", "Software Engineer", "Python"].map((t) => (
                 <span
                   key={t}
                   className="text-xs font-mono-acc text-[#bae6fd] px-3 py-1.5 rounded-full border border-[#7dd3fc]/25 bg-[#00132d]/60 text-center"

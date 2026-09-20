@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Play, Code2 } from "lucide-react";
+import { Github, Play, Code2, FileText, Presentation, Youtube } from "lucide-react";
 import SectionHeading from "@/components/sections/SectionHeading";
 import { OTHER_PROJECTS } from "@/data/portfolio";
 
@@ -53,28 +53,71 @@ export default function OtherProjects() {
                 ))}
               </div>
 
-              <div className="mt-5 flex items-center gap-3 pt-5 border-t border-[#7dd3fc]/15">
-                <a
-                  href={p.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm text-[#9CA3AF] link-glow"
-                  data-testid={`other-project-github-${i}`}
-                >
-                  <Github size={14} style={{ color: "#00D1FF" }} />
-                  GitHub
-                </a>
-                <a
-                  href={p.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm text-[#9CA3AF] link-glow"
-                  data-testid={`other-project-demo-${i}`}
-                >
-                  <Play size={14} style={{ color: "#00D1FF" }} />
-                  Demo
-                </a>
-              </div>
+              <div className="mt-5 flex flex-wrap items-center gap-3 pt-5 border-t border-[#7dd3fc]/15">
+
+  {p.github && (
+    <a
+      href={p.github}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-1.5 text-sm text-[#9CA3AF] link-glow"
+      data-testid={`other-project-github-${i}`}
+    >
+      <Github size={14} style={{ color: "#00D1FF" }} />
+      GitHub
+    </a>
+  )}
+
+  {p.demo && (
+    <a
+      href={p.demo}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-1.5 text-sm text-[#9CA3AF] link-glow"
+      data-testid={`other-project-demo-${i}`}
+    >
+      <Play size={14} style={{ color: "#00D1FF" }} />
+      Demo
+    </a>
+  )}
+
+  {p.Report && (
+    <a
+      href={p.Report}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-1.5 text-sm text-[#9CA3AF] link-glow"
+    >
+      <FileText size={14} style={{ color: "#00D1FF" }} />
+      Report
+    </a>
+  )}
+
+  {p.Presentation && (
+    <a
+      href={p.Presentation}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-1.5 text-sm text-[#9CA3AF] link-glow"
+    >
+      <Presentation size={14} style={{ color: "#00D1FF" }} />
+      Presentation
+    </a>
+  )}
+
+  {p.YouTube && (
+    <a
+      href={p.YouTube}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-1.5 text-sm text-[#9CA3AF] link-glow"
+    >
+      <Youtube size={14} style={{ color: "#00D1FF" }} />
+      YouTube
+    </a>
+  )}
+
+</div>
             </motion.div>
           ))}
         </div>

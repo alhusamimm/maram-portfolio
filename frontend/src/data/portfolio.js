@@ -12,6 +12,7 @@ export const PERSONAL = {
   phone: "+966 545 422 192",
   email: "alhusamimaro@gmail.com",
   linkedin: "https://www.linkedin.com/in/maram-alhusami",
+  youtube: "www.youtube.com/@MaramBuilds",
 };
 
 export const ABOUT = `I am a Computer Science student with a GPA of 3.96, specializing in the AI and Cybersecurity track. I am passionate about building intelligent systems and solving real-world problems using modern technologies. I continuously explore new tools and approaches to develop efficient, secure, and scalable solutions.`;
@@ -125,6 +126,15 @@ export const FEATURED_PROJECT = {
 
 export const LIVE_PROJECTS = [
   {
+    title: "EBC Website",
+    subtitle: "Educational & Business Consulting Platform",
+    description:
+      "Designed and developed a complete bilingual website featuring modern UI/UX, responsive design, certificate management, dynamic content sections, and scalable architecture for future CMS integration.",
+    role: "Full-Stack Web Developer & UI/UX Designer",
+    url: "https://ebe.com.sa/",
+    accent: "from-[#002d67] to-[#0E7490]",
+  },
+  {
     title: "WOW PACS / RIS",
     subtitle: "Integrated DICOM Imaging & Radiology Management System",
     description:
@@ -161,15 +171,6 @@ export const LIVE_PROJECTS = [
     accent: "from-[#7dd3fc] to-[#002d67]",
   },
   {
-    title: "EBC Website",
-    subtitle: "Educational & Business Consulting Platform",
-    description:
-      "Designed and developed a complete bilingual website featuring modern UI/UX, responsive design, certificate management, dynamic content sections, and scalable architecture for future CMS integration.",
-    role: "Full-Stack Web Developer & UI/UX Designer",
-    url: "https://ebc-website-five.vercel.app/",
-    accent: "from-[#002d67] to-[#0E7490]",
-  },
-  {
     title: "MATCHY Uniforms",
     subtitle: "Custom Uniforms & Embroidery E-Commerce Platform",
     description:
@@ -188,54 +189,57 @@ export const OTHER_PROJECTS = [
       "ML-based web app that analyzes uploaded videos and predicts authenticity using a trained CNN model.",
     tech: ["Python", "TensorFlow", "Flask", "OpenCV"],
     github: "https://github.com/alhusamimm/deepxpose-website",
-    demo: "#",
+    demo: "https://github.com/alhusamimm/deepxpose-website",
   },
   {
     title: "Deepfake Text Detection System",
     description:
       "NLP pipeline that classifies text as human-written or AI-generated using transformer embeddings.",
     tech: ["Python", "Transformers", "Scikit-learn", "NLP"],
-    github: "#",
-    demo: "#",
+    github: "https://github.com/alhusamimm/Deepfake-Text-Detection-Systems-for-Arabic-and-English-Using-BERT-and-ELECTRA-Based-Models",
   },
   {
-    title: "Encryption Tool with GUI",
+    title: "Machine Learning-Based Intrusion Detection",
     description:
       "Cryptography desktop app for symmetric and asymmetric encryption with a clean graphical interface.",
     tech: ["Python", "Tkinter", "Cryptography"],
-    github: "#",
-    demo: "#",
+    github: "https://github.com/RaghadKAlamoudi/CS-4082-Project",
+    Report: "https://github.com/RaghadKAlamoudi/CS-4082-Project/blob/main/Project_Machine_Learning_Report.pdf",
+    Presentation:"https://github.com/RaghadKAlamoudi/CS-4082-Project/blob/main/ML%20Project%20Presentation.pdf"
   },
   {
-    title: "Credit Card Offers Management System",
-    description:
-      "Full-stack web system to manage, filter, and serve credit card promotions to end users.",
-    tech: ["PHP", "MySQL", "Bootstrap", "JavaScript"],
-    github: "#",
-    demo: "#",
+    title: "Tourist Trip Planner (C++ & GUI)",
+    description:"This project is a real-world travel planning system built using C++ for the Data Structures course project. It lets users select countries, cities, and interests to generate a full travel itinerary with estimated time, cost, and a suggested route.",
+    tech: ["C++", "STL", "HTML","CSS", "JavaScript"],
+    github: "https://github.com/Jourialdagh/TouristTripPlanner_DS2025",
+    YouTube: "https://youtu.be/Df64p-kZCOc",
   },
 ];
 
 export const SKILLS = [
   {
     group: "Programming",
-    items: ["Python", "Java", "C++", "JavaScript"],
+    items: ["Python", "Java", "C++", "JavaScript", "Swift", "Dart", "SQL"],
   },
   {
     group: "Web",
-    items: ["HTML", "CSS", "PHP", "Bootstrap"],
+    items: ["React", "FastAPI", "Node.js","Flask", "HTML", "CSS", "PHP", "Bootstrap", "REST APIs"],
   },
   {
     group: "AI & Data",
-    items: ["Pandas", "NumPy", "Scikit-learn"],
+    items: ["PyTorch", "Transformers", "Pandas", "OpenCV", "MediaPipe","NumPy", "Scikit-learn"],
   },
   {
-    group: "Tools",
-    items: ["Flutter", "Firebase", "Frappe", "GitHub", "Postman"],
+    group: "Platforms & Tools",
+    items: ["Flutter", "Firebase", "Frappe","MongoDB", "GitHub", "Postman", "VS Code", "Figma", "n8n", "Zapier"],
   },
 ];
 
 export const AWARDS = [
+  {
+    title: "1st Place – 23rd Learning & Technology International Conference",
+    year: "2026",
+  },
   {
     title: "1st Place – Undergraduate Research Forum",
     year: "2024",
@@ -244,6 +248,10 @@ export const AWARDS = [
     title: "1st Place – German Day Projects Competition",
     year: "2023",
   },
+    {
+    title: "Queen Effat Citizenship Award Nominee",
+    year: "2022–2024",
+  },
   {
     title: "Dean's List",
     year: "Multiple Years",
@@ -251,6 +259,33 @@ export const AWARDS = [
 ];
 
 export const CERTIFICATIONS = [
+  {
+  title: "Swift 101",
+  organization: "Satr – Tuwaiq Academy",
+  date: "June 2026",
+  description:
+    "Beginner-level introduction to Swift programming, covering foundational concepts and core programming skills.",
+  url: "/files/Swift 101 certificate.png",
+  tag: "Course",
+},
+{
+  title: "Swift 102",
+  organization: "Satr – Tuwaiq Academy",
+  date: "July 2026",
+  description:
+    "Continued Swift programming training focused on building practical programming skills and expanding on Swift fundamentals.",
+  url: "/files/Swift 102 certificate.png",
+  tag: "Course",
+},
+{
+  title: "Swift 103",
+  organization: "Satr – Tuwaiq Academy",
+  date: "July 2026",
+  description:
+    "Intermediate-level Swift programming course focused on advancing practical iOS development and Swift programming skills.",
+  url: "/files/Swift 103 certificate.png",
+  tag: "Course",
+},
   {
     title: "Digital Portfolio Building Workshop",
     organization: "Effat University",
@@ -323,9 +358,13 @@ export const COURSES = [
 ];
 
 export const INTERESTS = [
-  "AI in cybersecurity",
+  "AI & Machine Learning",
   "Automation systems",
-  "Smart applications",
+  "Smart Applications",
+  "Website & Mobile Development",
+  "Data Science & Analytics",
+  "Cloud Computing & DevOps",
+  "IoT & Embedded Systems",
 ];
 
 export const LEARNING = [

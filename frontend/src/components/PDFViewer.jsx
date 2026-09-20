@@ -28,6 +28,7 @@ export default function PDFViewer({ url, title = "Certificate", subtitle, trigge
   const hasPdf = Boolean(url) && url !== "#";
   const pdfUrl = resolvePdfUrl(url);
 
+const isImage = /\.(png|jpe?g|webp|gif)$/i.test(url || "");
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
   const [scale, setScale] = useState(1.0);
@@ -155,13 +156,21 @@ export default function PDFViewer({ url, title = "Certificate", subtitle, trigge
                   This file hasn&apos;t been uploaded yet. Check back shortly.
                 </p>
               </div>
-            ) : (
-              <iframe
-                src={pdfUrl || url}
-                title={title || "PDF Preview"}
-                className="w-full h-full min-h-[75vh] border-0 rounded-xl bg-white"
-              />
-            )}
+            ) : isImage ? (
+  <div className="w-full h-full min-h-[75vh] flex items-center justify-center rounded-xl bg-white p-4">
+    <img
+      src={url}
+      alt={title || "Certificate"}
+      className="max-w-full max-h-[75vh] object-contain"
+    />
+  </div>
+) : (
+  <iframe
+    src={pdfUrl || url}
+    title={title || "PDF Preview"}
+    className="w-full h-full min-h-[75vh] border-0 rounded-xl bg-white"
+  />
+)}
           </div>
 
           {/* Page/zoom controls */}

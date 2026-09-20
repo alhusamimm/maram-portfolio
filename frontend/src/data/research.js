@@ -99,4 +99,19 @@ export const AWARDS_DETAIL = {
       },
     ],
   },
+  ltConference: {
+    id: "ltConference",
+    awardTitle: "1st Place – 23rd Learning & Technology International Conference",
+    modalTitle: "First Place Winner – L&T Conference 2026",
+    year: "2026",
+    track: "Twin Minds: Agentic AI and the New Era of Autonomy",
+    institution: "Effat University",
+    date: "2026",
+    description:
+      "Awarded First Place at the 23rd Learning & Technology International Conference at Effat University for DeepXpose, a transformer-based system for detecting deepfake videos using spatial and temporal cues.",
+    relatedResearch:
+      "DeepXpose – Deepfake Video Detection",
+    paperUrl: null,
+    gallery: [],
+  },
 };

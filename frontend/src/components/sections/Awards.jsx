@@ -37,10 +37,11 @@ export default function Awards() {
 
           <ul className="grid sm:grid-cols-3 gap-3">
             {AWARDS.map((a, i) => {
+              const isLTConference = a.title.includes("Learning & Technology International Conference");
               const isUgrf = a.title.includes("Undergraduate Research Forum");
               const isGermanDay = a.title.includes("German Day");
-              const isGold = isUgrf || isGermanDay;
-              const awardId = isUgrf ? "ugrf" : isGermanDay ? "germanDay" : null;
+              const isGold = isUgrf || isGermanDay || isLTConference;
+              const awardId = isUgrf ? "ugrf" : isGermanDay ? "germanDay" : isLTConference ? "ltConference" : null;
 
               const inner = (
                 <>

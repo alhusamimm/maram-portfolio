@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import axios from "axios";
 import { toast } from "sonner";
-import { Mail, Phone, Linkedin, Send, Loader2 } from "lucide-react";
+import { Mail, Phone, Linkedin, Youtube, Send, Loader2 } from "lucide-react";
 import SectionHeading from "@/components/sections/SectionHeading";
 import { PERSONAL } from "@/data/portfolio";
 
@@ -208,7 +208,29 @@ export default function Contact() {
                     /in/maram-alhusami
                   </div>
                 </div>
+
               </a>
+
+              <a
+  href={PERSONAL.youtube}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center gap-4 p-4 rounded-xl bg-[#00132d]/60 border border-[#7dd3fc]/15 hover:border-[#00D1FF]/50 transition-all group"
+  data-testid="contact-link-youtube"
+>
+  <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[#001e45]/70 border border-[#00D1FF]/25 group-hover:border-[#00D1FF]/60 transition-colors">
+    <Youtube size={16} style={{ color: "#00D1FF" }} />
+  </div>
+
+  <div className="min-w-0">
+    <div className="text-[10px] font-mono-acc tracking-widest text-[#7dd3fc]">
+      YOUTUBE
+    </div>
+    <div className="text-sm text-[#E5E7EB] truncate group-hover:text-[#bae6fd] transition-colors">
+      Maram Builds
+    </div>
+  </div>
+</a>
             </div>
           </motion.div>
         </div>
